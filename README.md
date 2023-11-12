@@ -24,8 +24,6 @@ Each topic is contained in its own Python script with detailed comments explaini
 
 ### If Statements
 
-`if_statements.py` demonstrates the usage of if, elif, and else blocks.
-
 ```python
 # Example of if-elif-else
 x = 10
@@ -35,4 +33,56 @@ elif x == 10:
     print("x is exactly 10")
 else:
     print("x is less than 10")
+```
 
+### Else
+# Example of for loop
+```python
+
+for i in range(5):
+    print(i)
+
+```
+
+### While Loop
+# Example of while loop
+```python
+
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+
+```
+
+### Nested Loop
+# Example of nested for loop
+```python
+
+for i in range(3):
+    for j in range(2):
+        print(f"i: {i}, j: {j}")
+
+```
+
+# Example of nested for loop
+```python
+
+for i in range(3):
+    for j in range(2):
+        print(f"i: {i}, j: {j}")
+
+```
+
+# Example of recursion
+```python
+
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))
+
+```

@@ -36,7 +36,8 @@ else:
 ```
 
 ### Else
-# Example of for loop
+#### Example of for loop
+
 ```python
 
 for i in range(5):
@@ -45,7 +46,8 @@ for i in range(5):
 ```
 
 ### While Loop
-# Example of while loop
+#### Example of while loop
+
 ```python
 
 count = 0
@@ -56,7 +58,8 @@ while count < 5:
 ```
 
 ### Nested Loop
-# Example of nested for loop
+#### Example of nested for loop
+
 ```python
 
 for i in range(3):
@@ -65,7 +68,7 @@ for i in range(3):
 
 ```
 
-# Example of nested for loop
+#### Example of nested for loop
 ```python
 
 for i in range(3):
@@ -74,7 +77,7 @@ for i in range(3):
 
 ```
 
-# Example of recursion
+#### Example of recursion
 ```python
 
 def factorial(n):

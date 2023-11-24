@@ -1,6 +1,6 @@
-# Python Crash Course - Google Automation
+# Python Crash Course - Google Automation :google: 
 
-This repository is a comprehensive guide to some of the fundamental concepts of Python programming. It includes examples and explanations of various Python constructs and data types.
+This repository is a comprehensive guide to some of the fundamental concepts of Python programming. It includes examples and explanations of various Python constructs and data types. 🐍
 
 ## Contents
 

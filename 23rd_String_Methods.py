@@ -138,3 +138,90 @@ text = "   "
 print(text.isspace())  # Output: True
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+
+- format(): Method in Python is a powerful tool for string formatting. It allows you to insert values into a string with placeholders, making it 
+easier to generate dynamic text. Here are some examples to illustrate its usage:
+
+"""
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+
+# 1 - Basic Formatting:
+
+name = "Alice"
+message = "Hello, {}!".format(name)
+print(message)  # Output: "Hello, Alice!"
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+
+# 2 - Positional Arguments:
+
+first_name = "Alice"
+last_name = "Smith"
+message = "Hello, {} {}".format(first_name, last_name)
+print(message)  # Output: "Hello, Alice Smith"
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+
+# 3 - Keyword Arguments:
+
+message = "Hello, {first_name} {last_name}".format(first_name="Alice", last_name="Smith")
+print(message)  # Output: "Hello, Alice Smith"
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+
+# 4 - Formatting Numbers:
+
+pi = 3.14159
+message = "The value of pi is {:.2f}".format(pi)
+print(message)  # Output: "The value of pi is 3.14"
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+
+# 5 - Padding and Aligning Strings:
+
+text = "Python"
+message = "|{:<10}|".format(text)  # Left align
+print(message)  # Output: "|Python    |"
+
+message = "|{:>10}|".format(text)  # Right align
+print(message)  # Output: "|    Python|"
+
+message = "|{:^10}|".format(text)  # Center align
+print(message)  # Output: "|  Python  |"
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+
+# 6 - Named Placeholders:
+
+data = {'first': 'Alice', 'last': 'Smith'}
+message = "Hello, {first} {last}".format(**data)
+print(message)  # Output: "Hello, Alice Smith"
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+
+# 7 - Format with Lists:
+
+list_items = ['apples', 'bananas', 'grapes']
+message = "I have {}, {} and {}.".format(*list_items)
+print(message)  # Output: "I have apples, bananas and grapes."
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+
+# 8 - Mixing Placeholders:
+
+name = "Alice"
+age = 30
+message = "{0} is {1} years old. {0} loves Python.".format(name, age)
+print(message)  # Output: "Alice is 30 years old. Alice loves Python."
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+

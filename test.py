@@ -1,5 +1,5 @@
+car_make = "Lamborghini"
 
-
-word = "hello" 
-
-print(word[1:-1]+word[-1]+word[0]+"ay")
+print(car_make[3:-5])
+print(car_make[-4:])
+print(car_make[:7])

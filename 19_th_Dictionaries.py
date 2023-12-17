@@ -256,3 +256,56 @@ print(highlight_word("Automating with Python is fun", "fun"))
 ##################################################################
 ##################################################################
 
+def countries(countries_dict):
+    result = ""
+    # Complete the for loop to iterate through the key and value items 
+    # in the dictionary.
+    for values in countries_dict.values():
+        # Use a string method to format the required string.
+        result += str(values) + "\n"
+    return result
+
+print(countries({"Africa": ["Kenya", "Egypt", "Nigeria"], "Asia":["China", "India", "Thailand"], "South America": ["Ecuador", "Bolivia", "Brazil"]}))
+
+# Should print:
+# ['Kenya', 'Egypt', 'Nigeria']
+# ['China', 'India', 'Thailand']
+# ['Ecuador', 'Bolivia', 'Brazil']
+
+##################################################################
+##################################################################
+
+def combine_guests(guests1, guests2):
+  guests2.update(guests1) # Use a dictionary method to combine the dictionaries.
+  return guests2
+
+Ricks_guests = { "Adam":2, "Camila":3, "David":1, "Jamal":3, "Charley":2, "Titus":1, "Raj":4}
+Tessas_guests = { "David":4, "Noemi":1, "Raj":2, "Adam":1, "Sakira":3, "Chidi":5}
+
+print(combine_guests(Ricks_guests, Tessas_guests))
+# Should print:
+# {'David': 1, 'Noemi': 1, 'Raj': 4, 'Adam': 2, 'Sakira': 3, 'Chidi': 5, 'Camila': 3, 'Jamal': 3, 'Charley': 2, 'Titus': 1}
+
+##################################################################
+##################################################################
+
+
+def setup_gradebook(old_gradebook):
+  # Use a dictionary method to create a new copy of the "old_gradebook".
+  new_gradebook = old_gradebook.copy()
+    # Complete the for loop to iterate over the new gradebook. 
+  for key in old_gradebook:
+        # Use a dictionary operation to reset the grade values to 0.
+        new_gradebook[key] = 0
+        
+  return new_gradebook
+
+fall_gradebook = {"James": 93, "Felicity": 98, "Barakaa": 80}
+print(setup_gradebook(fall_gradebook))
+# Should output {'James': 0, 'Felicity': 0, 'Barakaa': 0}
+
+##################################################################
+##################################################################
+
+
+

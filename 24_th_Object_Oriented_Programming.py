@@ -8,6 +8,9 @@ As a Python developer, understanding Object-Oriented Programming (OOP) is crucia
 related properties and behaviors into individual objects. This concept revolves around classes and objects, along with concepts like inheritance, 
 encapsulation, and polymorphism.
 
+The attributes are the characteristics associated to a type
+The methods are the functions associated to a type
+
 In object-oriented programming, concepts are modeled as classes and objects. An idea is defined using a class, and an instance of this class is called
 an object. Almost everything in Python is an object, including strings, lists, dictionaries, and numbers. When we create a list in Python, we’re 
 creating an object which is an instance of the list class, which represents the concept of a list. Classes also have attributes and methods associated 

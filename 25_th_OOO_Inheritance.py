@@ -9,6 +9,8 @@ reusability and a hierarchical organization of classes.
 
 Here's a basic overview of how inheritance works in Python:
 
+"""
+
 1 - Defining a Parent Class: A parent class, also known as a base or superclass, is a class that is being inherited from. It includes methods and 
 attributes that will be available to the child class.
 
@@ -51,14 +53,9 @@ This allows you to customize or extend the behavior of the parent class method.
 6 - Method Overloading: Python does not support method overloading like other languages (e.g., Java or C++). However, you can achieve similar 
 functionality using default arguments or variable-length arguments.
 
-"""
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
-"""
-
-
-"""
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -115,6 +112,3 @@ estudiante1 = estudiante(x,age,gr)
 estudiante1.estudiar()
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-

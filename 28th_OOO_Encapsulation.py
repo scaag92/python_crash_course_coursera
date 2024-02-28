@@ -16,13 +16,6 @@ Protected members: Protected members are defined by prefixing the name with a si
 class and its subclasses. It's more of a convention than enforced by the language.
 
 
-Proteger los metodos o atributos de una clase
-
-
-
-Examples
-Let's go through examples to better understand encapsulation in Python:
-
 """
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -81,4 +74,37 @@ print(my_laptop._brand)  # Lenovo
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Getters
 
+class  Persona:
+    def __init__(self,nombre,edad):
+        self.__nombre = nombre
+        self.__edad = edad
+
+    def get_nombre(self):
+        return self.__nombre
+
+
+cristian = Persona()
+nombre = cristian.get_nombre()
+print(nombre) 
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------       
+
+# Setters
+
+class  Persona:
+    def __init__(self,nombre,edad):
+        self.__nombre = nombre
+        self.__edad = edad
+
+    def set_nombre(self, new_nombre):
+        self.set__nombre = new_nombre
+
+
+cristian = Persona()
+cristian.get_nombre() = juanito
+print(nombre) 
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------

@@ -106,5 +106,47 @@ cristian = Persona()
 cristian.get_nombre() = juanito
 print(nombre) 
 
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+DECORADOR PROPERTY
+Python decorador property is a built-in decorator that creates a property object from a method. And it allows us to define a method that can be accessed like an attribute, instead of like a method.
+
+The Property Decorator: Attributes in Disguise
+
+The @property decorator in Python provides a sleek way to make class attributes behave like methods. In essence, it lets you define methods that are accessed as if they were simple attributes, without using the parentheses typical of method calls.
+
+Why Use the Property Decorator?
+1 - Abstraction and Control:  The @property decorator lets you control how an attribute is accessed and modified.
+
+2 - Calculated Attributes  You can define attributes that are calculated on the fly rather than storing a direct value.
+
+3 -  Cleaner Code:  Using properties makes your code more readable and aligns with the principle of object-oriented programming by encapsulating behavior within your classes.
+"""
+
+class Persona:
+    def __init__(self, nombre, edad):
+        self.__nombre = nombre
+        self.__edad = edad
+
+    @property
+    def nombre(self):
+        return self.__nombre
+
+    @nombre.setter
+    def nombre(self, nombre):
+        if nombre == '':
+            raise ValueError('El nombre no puede estar vacío')
+        self.__nombre = nombre
+
+    @nombre.deleter
+    def nombre(self):
+        del self.__nombre
+
+cristian = Persona('Cristian',25)
+cristian.nombre = 'Cristian David'
+print(cristian.nombre) # Cristian David
+del cristian.nombre
+print(cristian.nombre) # AttributeError: 'Persona' object has no attribute '_Persona__nombre'
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
+

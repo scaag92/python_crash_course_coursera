@@ -80,3 +80,17 @@ def sensitive_function():
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
+def  decorator(function):
+    def funcion_modificada():
+        print("Antes de ejecutar la funcion")
+        function()
+    return funcion_modificada
+
+def saludo():
+    print("Hola")
+
+saludo_modificado = decorator(saludo)
+saludo_modificado()
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+

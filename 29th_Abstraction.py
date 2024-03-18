@@ -64,3 +64,60 @@ pedrito.presentarse()
 pedrito.hacer_actividad()
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------v
+
+class Persona: 
+    def __init__(self, nombre, edad):
+        self.__nombre = nombre
+        self.__edad = edad
+    @property
+    def nombre(self):
+        return self.__nombre
+
+cristian = Persona('Cristian',25)
+nombre = cristian.nombre
+print(nombre) # Cristian
+
+cristian.nombre = 'Cristian David' # AttributeError: can't set attribute
+
+# El error anterior se debe a que el atributo nombre es privado, por lo que no se puede modificar directamente
+
+#------------------------------------------------------------
+
+# Para solucionar el problema anterior, se puede hacer uso de un decorador setter
+class Persona: 
+    def __init__(self, nombre, edad):
+        self.__nombre = nombre
+        self.__edad = edad
+    @property
+    def nombre(self):
+        return self.__nombre
+    @nombre.setter
+    def nombre(self, nombre):
+        self.__nombre = nombre
+
+#------------------------------------------------------------
+
+class Persona:
+    def __init__(self, nombre, edad):
+        self.__nombre = nombre
+        self.__edad = edad
+    
+    @property
+    def nombre(self):
+        return self.__nombre
+    
+    @nombre.setter
+    def nombre(self, nombre):
+        if nombre == '':
+            raise ValueError('El nombre no puede estar vacío')
+        self.__nombre = nombre
+    
+    @nombre.deleter
+    def nombre(self):
+        del self.__nombre
+
+cristian = Persona('Cristian',25)
+cristian.nombre = 'Cristian David'
+print(cristian.nombre) # Cristian David
+del cristian.nombre
+print(cristian.nombre) # AttributeError: 'Persona' object has no attribute '_Persona__nombre'

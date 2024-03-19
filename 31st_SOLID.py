@@ -166,7 +166,57 @@ class  Robot(Trabajador):
 
 robocito = robot()
 
-
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
+'''
 
+D: DEPENDENCY INVERSION PRINCIPLE
+High-level modules shouldn't depend on low-level modules; both should depend on abstractions.
+
+'''
+
+from abc import ABC, abstractmethod
+
+class VerificadorOrtografico(ABC)
+    @abstractmethod
+    def verificar_palabra(self,palabra):
+        #Logica para verificar palabras
+        pass
+
+class Diccionario(VerificadorOrtografico):
+    def verifica_palabra(self,palabra):
+        # Logica para verificar las palabras si está en el Diccionario
+        pass
+
+class  ServicioOnline(VerificadorOrtografico):
+    def verificar_palabra(self,palabra):
+        #Logica para verificar palabras desde el servicio web
+        pass
+
+class CorrectorOrtografico:
+    def __init__(self,verificador):
+        self.verificador = verificador
+
+    def correfir_texto(self,texto):
+        # Usamos el verificador para corregir texto
+
+
+#- - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+# Bad: Tight coupling
+class EmailSender:
+    def send(self, message):
+        smtp_client = SMTPClient()  # Direct dependency
+        smtp_client.send_email(message)
+
+# Good: Dependency on abstraction
+class EmailClient:
+    def send(self, message):
+        raise NotImplementedError()
+
+class SMTPEmailClient(EmailClient):
+    def send(self, message):
+        # ...    
+ 
+#---------------------------------------------------------------------------------------------------------------------------------------------------

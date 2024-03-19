@@ -74,11 +74,99 @@ print(carrito.mover(90))
 
 O: OPEN / CLOSED PRINCIPLE
 
+Software Entities must be Open for extention, Closed to be modified
+
+
 '''
 
+class Notificador:
+    def __init__(self,usuario,mensaje):
+        self.usuario = usuario
+        self.mensaje = mensaje
+
+    def notificar(self):
+        raise NotImplementedError
+
+class NotificadorEmail(Notificador):
+    def  Notificar(self):
+        print(f"Enviando mensaje por MAIL a {self.usuario.email}")
+
+class NotificadorSMS(Notificador):
+    def  Notificar(self):
+        print(f"Enviando mensaje por SMS a {self.usuario.email}")
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+'''
+
+L: LISKOV SUBSTITUTION PRINCIPLE
+
+Si la clase B es una derivada de la clase A. La clase A debería poder ser utilizada en todos los lugarres donde B es utilizada
+
+Subclasses should be substitutable for their base classes without breaking the system.
+
+'''
+
+class Ave:
+    def volar(self):
+        return "Estoy volando"
+
+class Pinguino(Ave):
+    def volar(self):
+        return "No puedo volar"
+
+def  hacer_volar(ave = Ave):
+    return ave.volar()
+
+print(hacer_volar)
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+'''
+
+I: INTERFACE SEGREGATION PRINCIPLE
+
+Many smaller, client-specific interfaces are better than one large, general-purpose interface.
+
+No forcemos al cliente a depender de interfaces que no va a utilizar
+
+'''
+
+from abc import ABC, abstractmethod
+
+class Trabajador(ABC):
+    @abstractmethod
+    def trabajar(self):
+        pass
+
+ class Comedor(ABC):
+    @abstractmethod
+    def comer(self):
+        pass
+    
+class durmiente(ABC):
+    @abstractmethod
+    def dormir(self):
+        pass
 
 
+class Humano(Trabajador, Comedor, durmiente):
+    def trabajar(self):
+        print("El humano esta trabajando")
 
+    def comer(self):
+        print("El humano esta comiendo")
+
+    def dormir(self):
+        print("El humano esta durmiendo")
+
+class  Robot(Trabajador):
+    def trabajar(self):
+        print("El robot esta trabajando")
+
+
+robocito = robot()
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
+
+

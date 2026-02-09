@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Documentation](https://img.shields.io/badge/docs-available-brightgreen.svg)](docs/)
 
-Repositorio completo de un curso intensivo de Python, desde conceptos básicos hasta programación orientada a objetos avanzada y principios SOLID. Incluye 32 lecciones progresivas y desafíos prácticos enfocados en Cloud/DevOps.
+Repositorio completo de un curso intensivo de Python, desde conceptos básicos hasta programación orientada a objetos avanzada y principios SOLID. Incluye 33 lecciones progresivas y desafíos prácticos enfocados en Cloud/DevOps.
 
 ---
 
@@ -40,26 +40,27 @@ Comienza aquí para ver el índice completo y la ruta de aprendizaje recomendada
 - **[Lección 18](docs/03-estructuras-datos.md#comprension)**: List Comprehension
 - **[Lección 19](docs/03-estructuras-datos.md#diccionarios)**: Diccionarios
 - **[Lección 20](docs/03-estructuras-datos.md#generadores)**: Generadores
+- **[Lección 23](docs/03-estructuras-datos.md#sets-conjuntos)**: Sets (Conjuntos)
 
 ### 🚀 Conceptos Avanzados (Semana 4)
 - **[Lección 21](docs/04-avanzado.md#decoradores)**: Decoradores
 - **[Lección 22](docs/04-avanzado.md#recursion-avanzada)**: Recursión Avanzada
-- **[Lección 23](docs/04-avanzado.md#string-methods)**: Métodos de Strings
+- **[Lección 24](docs/04-avanzado.md#string-methods)**: Métodos de Strings
 
 ### 🏗️ OOP Básico (Semana 5)
-- **[Lección 24](docs/05-oop-basico.md#introduccion)**: Introducción a OOP
-- **[Lección 25](docs/05-oop-basico.md#herencia)**: Herencia
+- **[Lección 25](docs/05-oop-basico.md#introduccion)**: Introducción a OOP
+- **[Lección 26](docs/05-oop-basico.md#herencia)**: Herencia
 
 ### 🎓 OOP Avanzado (Semana 6)
-- **[Lección 26](docs/06-oop-avanzado.md#mro)**: Method Resolution Order (MRO)
-- **[Lección 27](docs/06-oop-avanzado.md#polimorfismo)**: Polimorfismo
-- **[Lección 28](docs/06-oop-avanzado.md#encapsulacion)**: Encapsulación
-- **[Lección 29](docs/06-oop-avanzado.md#abstraccion)**: Abstracción
-- **[Lección 30](docs/06-oop-avanzado.md#metodos-especiales)**: Métodos Especiales
+- **[Lección 27](docs/06-oop-avanzado.md#mro)**: Method Resolution Order (MRO)
+- **[Lección 28](docs/06-oop-avanzado.md#polimorfismo)**: Polimorfismo
+- **[Lección 29](docs/06-oop-avanzado.md#encapsulacion)**: Encapsulación
+- **[Lección 30](docs/06-oop-avanzado.md#abstraccion)**: Abstracción
+- **[Lección 31](docs/06-oop-avanzado.md#metodos-especiales)**: Métodos Especiales
 
 ### 🎯 Principios y Proyectos (Semana 7)
-- **[Lección 31](docs/07-solid.md)**: Principios SOLID
-- **[Lección 32](docs/08-proyecto-final.md)**: Proyecto Final - Analizador de Sentimientos
+- **[Lección 32](docs/07-solid.md)**: Principios SOLID
+- **[Lección 33](docs/08-proyecto-final.md)**: Proyecto Final - Analizador de Sentimientos
 
 ### 💼 Desafíos Prácticos
 - **[Challenges Cloud/DevOps](docs/09-challenges.md)**: 5 desafíos prácticos
@@ -81,11 +82,12 @@ python_crash_course_coursera/
 │   ├── 07-solid.md
 │   ├── 08-proyecto-final.md
 │   └── 09-challenges.md
-├── Lessons/                       # 📝 32 lecciones de código
+├── Lessons/                       # 📝 33 lecciones de código
 │   ├── 1_st_hello_world.py
 │   ├── 2_nd_input.py
 │   ├── ...
-│   └── 32nd_Final_Excercise.py
+│   ├── 23_rd_Sets.py
+│   └── 33rd_Final_Excercise.py
 ├── Challenges/                    # 💼 Desafíos prácticos
 │   ├── 1stChallenge.py
 │   ├── 2ndChallenge.py

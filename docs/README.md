@@ -25,24 +25,25 @@ Bienvenido a la documentación completa del curso de Python. Este curso está di
 - [18. Comprensión de Listas](./03-estructuras-datos.md#comprension)
 - [19. Diccionarios](./03-estructuras-datos.md#diccionarios)
 - [20. Generadores](./03-estructuras-datos.md#generadores)
+- [23. Sets (Conjuntos)](./03-estructuras-datos.md#sets-conjuntos)
 
 ### 🚀 Conceptos Avanzados
 - [21. Decoradores](./04-avanzado.md#decoradores)
 - [22. Recursión Avanzada](./04-avanzado.md#recursion-avanzada)
-- [23. Métodos de Strings](./04-avanzado.md#string-methods)
+- [24. Métodos de Strings](./04-avanzado.md#string-methods)
 
 ### 🏗️ Programación Orientada a Objetos
-- [24. Introducción a OOP](./05-oop-basico.md#introduccion)
-- [25. Herencia](./05-oop-basico.md#herencia)
-- [26. MRO - Method Resolution Order](./06-oop-avanzado.md#mro)
-- [27. Polimorfismo](./06-oop-avanzado.md#polimorfismo)
-- [28. Encapsulación](./06-oop-avanzado.md#encapsulacion)
-- [29. Abstracción](./06-oop-avanzado.md#abstraccion)
-- [30. Métodos Especiales](./06-oop-avanzado.md#metodos-especiales)
+- [25. Introducción a OOP](./05-oop-basico.md#introduccion)
+- [26. Herencia](./05-oop-basico.md#herencia)
+- [27. MRO - Method Resolution Order](./06-oop-avanzado.md#mro)
+- [28. Polimorfismo](./06-oop-avanzado.md#polimorfismo)
+- [29. Encapsulación](./06-oop-avanzado.md#encapsulacion)
+- [30. Abstracción](./06-oop-avanzado.md#abstraccion)
+- [31. Métodos Especiales](./06-oop-avanzado.md#metodos-especiales)
 
 ### 🎓 Principios y Proyectos
-- [31. Principios SOLID](./07-solid.md)
-- [32. Proyecto Final - Analizador de Sentimientos](./08-proyecto-final.md)
+- [32. Principios SOLID](./07-solid.md)
+- [33. Proyecto Final - Analizador de Sentimientos](./08-proyecto-final.md)
 
 ### 💼 Desafíos Prácticos
 - [Desafíos Cloud/DevOps](./09-challenges.md)

@@ -302,6 +302,242 @@ new_dict = dict.copy()
 
 ---
 
+## Sets (Conjuntos)
+
+### Lección 23: Sets en Python
+
+Los sets son una estructura de datos basada en el concepto matemático de conjuntos.
+
+#### Características de los Sets
+
+1. **Unordered (Sin orden)**: Los elementos no tienen un orden específico
+2. **Unique (Únicos)**: Cada elemento debe ser único, los duplicados se eliminan automáticamente
+3. **Mutable**: Puedes agregar o eliminar elementos, pero los elementos mismos deben ser inmutables
+
+#### Crear un Set
+
+```python
+# Set literal
+set1 = {1, 2, 3, 4, 5}
+print(set1)  # {1, 2, 3, 4, 5}
+
+# Desde una lista
+list_1 = [10, 12, 13, 14, 15, 16, 17]
+set2 = set(list_1)
+print(set2)  # {10, 12, 13, 14, 15, 16, 17}
+
+# Set vacío (IMPORTANTE: no usar {})
+empty_set = set()  # Correcto
+# empty_dict = {}  # Esto crea un diccionario, no un set!
+```
+
+⚠️ **Advertencia**: `{}` crea un diccionario vacío, no un set. Usa `set()` para crear un set vacío.
+
+---
+
+### Agregar y Eliminar Elementos
+
+```python
+my_set = {1, 2, 3}
+
+# add() - Agregar un elemento
+my_set.add(4)
+print(my_set)  # {1, 2, 3, 4}
+
+# update() - Agregar múltiples elementos
+my_set.update([5, 6, 7])
+print(my_set)  # {1, 2, 3, 4, 5, 6, 7}
+
+# remove() - Eliminar elemento (error si no existe)
+my_set.remove(7)
+print(my_set)  # {1, 2, 3, 4, 5, 6}
+
+# discard() - Eliminar elemento (sin error si no existe)
+my_set.discard(10)  # No causa error
+print(my_set)  # {1, 2, 3, 4, 5, 6}
+
+# pop() - Eliminar y retornar un elemento aleatorio
+element = my_set.pop()
+print(element)  # Elemento aleatorio
+print(my_set)   # Set sin ese elemento
+
+# clear() - Vaciar el set
+my_set.clear()
+print(my_set)  # set()
+```
+
+---
+
+### Operaciones Matemáticas de Sets
+
+#### Union (|)
+Todos los elementos de ambos sets.
+
+```python
+set_a = {1, 2, 3, 4, 5}
+set_b = {2, 4, 6, 8, 9}
+
+# Union
+union = set_a | set_b
+print(union)  # {1, 2, 3, 4, 5, 6, 8, 9}
+
+# También con método
+union = set_a.union(set_b)
+```
+
+#### Intersection (&)
+Solo elementos presentes en ambos sets.
+
+```python
+intersection = set_a & set_b
+print(intersection)  # {2, 4}
+
+# También con método
+intersection = set_a.intersection(set_b)
+```
+
+#### Difference (-)
+Elementos en A que no están en B.
+
+```python
+difference = set_a - set_b
+print(difference)  # {1, 3, 5}
+
+# También con método
+difference = set_a.difference(set_b)
+```
+
+#### Symmetric Difference (^)
+Elementos en cualquiera de los sets pero NO en ambos.
+
+```python
+sym_diff = set_a ^ set_b
+print(sym_diff)  # {1, 3, 5, 6, 8, 9}
+
+# También con método
+sym_diff = set_a.symmetric_difference(set_b)
+```
+
+---
+
+### Métodos de Verificación
+
+```python
+set_a = {1, 2, 3, 4, 5}
+set_b = {1, 2, 3}
+set_c = {6, 7, 8}
+
+# issubset() - ¿Es subconjunto?
+print(set_b.issubset(set_a))  # True
+
+# issuperset() - ¿Es superconjunto?
+print(set_a.issuperset(set_b))  # True
+
+# isdisjoint() - ¿No tienen elementos en común?
+print(set_a.isdisjoint(set_c))  # True
+```
+
+---
+
+### Casos de Uso Prácticos
+
+#### 1. Eliminar Duplicados
+
+```python
+numbers = [1, 2, 2, 3, 4, 4, 5, 5, 5]
+unique_numbers = list(set(numbers))
+print(unique_numbers)  # [1, 2, 3, 4, 5]
+```
+
+#### 2. Validar Tags (Challenge 4)
+
+```python
+required_tags = {"env", "owner", "cost_center"}
+current_tags = {"env", "created_by"}
+
+missing_tags = required_tags - current_tags
+print(missing_tags)  # {'owner', 'cost_center'}
+```
+
+#### 3. Encontrar Elementos Comunes
+
+```python
+users_group_a = {"alice", "bob", "charlie"}
+users_group_b = {"bob", "david", "charlie"}
+
+common_users = users_group_a & users_group_b
+print(common_users)  # {'bob', 'charlie'}
+```
+
+#### 4. Verificar Permisos
+
+```python
+required_permissions = {"read", "write", "execute"}
+user_permissions = {"read", "write"}
+
+has_all_permissions = required_permissions.issubset(user_permissions)
+print(has_all_permissions)  # False
+
+missing_permissions = required_permissions - user_permissions
+print(missing_permissions)  # {'execute'}
+```
+
+---
+
+### Frozen Sets
+
+Los frozen sets son sets inmutables.
+
+```python
+# Crear frozen set
+frozen = frozenset([1, 2, 3, 4, 5])
+
+# No se pueden modificar
+# frozen.add(6)  # AttributeError
+
+# Útil como keys de diccionarios
+my_dict = {
+    frozenset([1, 2]): "value1",
+    frozenset([3, 4]): "value2"
+}
+```
+
+---
+
+### Comparación: Set vs List vs Tuple vs Dict
+
+| Característica | Set | List | Tuple | Dict |
+|----------------|-----|------|-------|------|
+| Ordenado | ❌ | ✅ | ✅ | ✅ (3.7+) |
+| Mutable | ✅ | ✅ | ❌ | ✅ |
+| Duplicados | ❌ | ✅ | ✅ | ❌ (keys) |
+| Indexable | ❌ | ✅ | ✅ | ✅ (keys) |
+| Operaciones matemáticas | ✅ | ❌ | ❌ | ❌ |
+
+---
+
+### Performance
+
+Sets son muy eficientes para:
+- ✅ Verificar membresía (`in` operator): O(1)
+- ✅ Agregar elementos: O(1)
+- ✅ Eliminar elementos: O(1)
+- ✅ Operaciones de conjuntos: O(len(s))
+
+```python
+# Verificar membresía
+my_set = {1, 2, 3, 4, 5}
+my_list = [1, 2, 3, 4, 5]
+
+# Set: O(1) - muy rápido
+print(3 in my_set)  # True
+
+# List: O(n) - más lento para listas grandes
+print(3 in my_list)  # True
+```
+
+---
+
 ## Generadores
 
 ### Lección 20: Generadores con Yield
@@ -383,5 +619,6 @@ En esta sección aprendiste:
 - ✅ List comprehension
 - ✅ Diccionarios y sus operaciones
 - ✅ Generadores con yield
+- ✅ Sets y operaciones matemáticas de conjuntos
 
 💡 **Siguiente paso**: Continúa con [Conceptos Avanzados](./04-avanzado.md).

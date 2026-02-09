@@ -1,5 +1,30 @@
 # 📊 Estructuras de Datos en Python
 
+## Jerarquía de Estructuras de Datos
+
+```mermaid
+graph TD
+    A[Estructuras de Datos en Python] --> B[Secuencias]
+    A --> C[Mapeos]
+    A --> D[Conjuntos]
+    
+    B --> E[Listas - Mutables]
+    B --> F[Tuplas - Inmutables]
+    B --> G[Strings - Inmutables]
+    
+    C --> H[Diccionarios]
+    
+    D --> I[Sets - Mutables]
+    D --> J[Frozensets - Inmutables]
+    
+    style E fill:#90EE90
+    style F fill:#FFB6C1
+    style G fill:#FFB6C1
+    style H fill:#87CEEB
+    style I fill:#90EE90
+    style J fill:#FFB6C1
+```
+
 ## Tipos de Datos
 
 ### Lección 15: Tipos de Datos y Operaciones con Strings
@@ -307,6 +332,43 @@ new_dict = dict.copy()
 ### Lección 23: Sets en Python
 
 Los sets son una estructura de datos basada en el concepto matemático de conjuntos.
+
+#### Diagrama de Operaciones de Sets
+
+```mermaid
+graph TD
+    subgraph "Set A = {1,2,3,4,5}"
+    A1[1] 
+    A2[2]
+    A3[3]
+    A4[4]
+    A5[5]
+    end
+    
+    subgraph "Set B = {4,5,6,7,8}"
+    B1[4]
+    B2[5]
+    B3[6]
+    B4[7]
+    B5[8]
+    end
+    
+    subgraph "Union A | B"
+    U[1,2,3,4,5,6,7,8]
+    end
+    
+    subgraph "Intersection A & B"
+    I[4,5]
+    end
+    
+    subgraph "Difference A - B"
+    D[1,2,3]
+    end
+    
+    subgraph "Symmetric Diff A ^ B"
+    S[1,2,3,6,7,8]
+    end
+```
 
 #### Características de los Sets
 

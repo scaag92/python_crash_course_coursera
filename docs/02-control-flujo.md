@@ -1,5 +1,24 @@
 # 🔄 Control de Flujo en Python
 
+## Diagrama de Flujo General
+
+```mermaid
+graph TD
+    A[Inicio del Programa] --> B{¿Necesitas reutilizar código?}
+    B -->|Sí| C[Funciones]
+    B -->|No| D{¿Necesitas tomar decisiones?}
+    D -->|Sí| E[Condicionales if/elif/else]
+    D -->|No| F{¿Necesitas repetir acciones?}
+    F -->|Número conocido| G[Bucle For]
+    F -->|Condición| H[Bucle While]
+    F -->|Llamada a sí mismo| I[Recursión]
+    G --> J[Fin]
+    H --> J
+    I --> J
+    E --> J
+    C --> J
+```
+
 ## Funciones
 
 ### Lección 8: Definición y Uso de Funciones
@@ -76,6 +95,23 @@ print(result)  # 11715
 ### Lección 9-10: If, Elif, Else
 
 Los condicionales permiten ejecutar código basado en condiciones.
+
+#### Diagrama de Flujo: If-Elif-Else
+
+```mermaid
+graph TD
+    A[Inicio] --> B{Condición 1}
+    B -->|True| C[Ejecutar Bloque 1]
+    B -->|False| D{Condición 2}
+    D -->|True| E[Ejecutar Bloque 2]
+    D -->|False| F{Condición 3}
+    F -->|True| G[Ejecutar Bloque 3]
+    F -->|False| H[Ejecutar Else]
+    C --> I[Fin]
+    E --> I
+    G --> I
+    H --> I
+```
 
 #### If Simple
 ```python
@@ -329,6 +365,27 @@ multiplication_table(1, 3)
 ### Lección 14, 22: Funciones Recursivas
 
 La recursión es cuando una función se llama a sí misma.
+
+#### Diagrama: Recursión vs Iteración
+
+```mermaid
+graph LR
+    subgraph Recursión
+    A1[factorial 5] --> A2[5 * factorial 4]
+    A2 --> A3[4 * factorial 3]
+    A3 --> A4[3 * factorial 2]
+    A4 --> A5[2 * factorial 1]
+    A5 --> A6[1 - Caso Base]
+    end
+    
+    subgraph Iteración
+    B1[result = 1] --> B2[result *= 5]
+    B2 --> B3[result *= 4]
+    B3 --> B4[result *= 3]
+    B4 --> B5[result *= 2]
+    B5 --> B6[result *= 1]
+    end
+```
 
 #### Factorial Recursivo
 ```python

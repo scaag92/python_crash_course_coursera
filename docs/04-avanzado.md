@@ -1,10 +1,73 @@
 # 🚀 Conceptos Avanzados de Python
 
+## Mapa de Conceptos Avanzados
+
+```mermaid
+mindmap
+  root((Conceptos Avanzados))
+    Decoradores
+      Logging
+      Timing
+      Caching
+      Authorization
+    Recursión
+      Factorial
+      Fibonacci
+      Tree Traversal
+    String Methods
+      Transformación
+      Búsqueda
+      Validación
+      Formato
+```
+
 ## Decoradores
 
 ### Lección 21: Decoradores en Python
 
 Los decoradores son funciones que modifican el comportamiento de otras funciones sin cambiar su código.
+
+#### Diagrama: Cómo Funcionan los Decoradores
+
+```mermaid
+sequenceDiagram
+    participant C as Código
+    participant D as Decorador
+    participant F as Función Original
+    participant R as Función Modificada
+    
+    C->>D: @decorador
+    D->>F: Recibe función
+    D->>R: Crea wrapper
+    R->>R: Agrega funcionalidad
+    R->>F: Llama función original
+    F->>R: Retorna resultado
+    R->>C: Retorna resultado modificado
+```
+
+#### Flujo de Ejecución
+
+```
+Sin Decorador:
+┌──────────┐
+│ función  │ → Ejecuta → Resultado
+└──────────┘
+
+Con Decorador:
+┌────────────────────────────────────┐
+│         @decorador                 │
+│  ┌──────────────────────────────┐  │
+│  │  Código antes               │  │
+│  │  ┌──────────┐               │  │
+│  │  │ función  │ → Ejecuta     │  │
+│  │  └──────────┘               │  │
+│  │  Código después             │  │
+│  └──────────────────────────────┘  │
+└────────────────────────────────────┘
+                │
+                ▼
+           Resultado
+```
 
 #### ¿Qué es un Decorador?
 

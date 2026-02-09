@@ -1,8 +1,49 @@
 # 🎯 Principios SOLID
 
-## Lección 31: Principios de Diseño de Software
+## Lección 32: Principios de Diseño de Software
 
 SOLID es un acrónimo de cinco principios de diseño orientado a objetos que ayudan a crear software más mantenible, escalable y robusto.
+
+## Diagrama General de SOLID
+
+```mermaid
+mindmap
+  root((SOLID))
+    S[Single Responsibility]
+      Una clase, una razón para cambiar
+      Separación de responsabilidades
+    O[Open/Closed]
+      Abierto a extensión
+      Cerrado a modificación
+    L[Liskov Substitution]
+      Subclases sustituibles
+      Mantener contratos
+    I[Interface Segregation]
+      Interfaces específicas
+      No forzar implementaciones
+    D[Dependency Inversion]
+      Depender de abstracciones
+      No de implementaciones
+```
+
+## Pirámide de SOLID
+
+```
+                    ▲
+                   ╱ ╲
+                  ╱ D ╲         Dependency Inversion
+                 ╱─────╲        (Abstracciones)
+                ╱   I   ╲       Interface Segregation
+               ╱─────────╲      (Interfaces específicas)
+              ╱     L     ╲     Liskov Substitution
+             ╱─────────────╲    (Sustituibilidad)
+            ╱       O       ╲   Open/Closed
+           ╱─────────────────╲  (Extensión)
+          ╱         S         ╲ Single Responsibility
+         ╱─────────────────────╲(Una responsabilidad)
+        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+           CÓDIGO MANTENIBLE
+```
 
 ---
 

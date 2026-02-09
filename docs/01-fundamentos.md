@@ -1,5 +1,21 @@
 # 🎯 Fundamentos de Python
 
+## Flujo de Aprendizaje
+
+```mermaid
+graph LR
+    A[Hello World] --> B[Variables y Tipos]
+    B --> C[Input/Output]
+    C --> D[Conversiones]
+    D --> E[Listo para Control de Flujo]
+    
+    style A fill:#90EE90
+    style B fill:#87CEEB
+    style C fill:#FFB6C1
+    style D fill:#DDA0DD
+    style E fill:#FFD700
+```
+
 ## Hello World
 
 ### Lección 1: Primeros Pasos
@@ -79,6 +95,55 @@ age = int(input("Enter your age: "))
 ### Lección 6-7: Conversiones Explícitas de Tipo
 
 La conversión explícita (type casting) es el proceso de convertir un tipo de dato a otro.
+
+#### Diagrama de Conversiones
+
+```mermaid
+graph TD
+    A[Tipos de Datos] --> B[int]
+    A --> C[float]
+    A --> D[str]
+    A --> E[list]
+    A --> F[tuple]
+    A --> G[dict]
+    
+    B -.->|int to float| C
+    B -.->|int to str| D
+    C -.->|float to int| B
+    C -.->|float to str| D
+    D -.->|str to int| B
+    D -.->|str to float| C
+    D -.->|str to list| E
+    E -.->|list to tuple| F
+    F -.->|tuple to list| E
+    E -.->|list to dict| G
+    
+    style B fill:#90EE90
+    style C fill:#87CEEB
+    style D fill:#FFB6C1
+    style E fill:#DDA0DD
+    style F fill:#FFD700
+    style G fill:#FFA07A
+```
+
+#### Tabla de Conversiones
+
+```
+┌──────────────────────────────────────────────┐
+│         CONVERSIONES DE TIPOS                │
+├──────────┬───────────┬───────────────────────┤
+│  Desde   │   Hacia   │      Función          │
+├──────────┼───────────┼───────────────────────┤
+│  float   │    int    │  int(3.14) → 3        │
+│  str     │    int    │  int("10") → 10       │
+│  int     │   float   │  float(5) → 5.0       │
+│  str     │   float   │  float("3.14") → 3.14 │
+│  int     │    str    │  str(10) → "10"       │
+│  list    │   tuple   │  tuple([1,2]) → (1,2) │
+│  tuple   │   list    │  list((1,2)) → [1,2]  │
+│  str     │   list    │  list("hi") → ['h','i']│
+└──────────┴───────────┴───────────────────────┘
+```
 
 #### Conversión a Integer
 ```python

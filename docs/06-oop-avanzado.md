@@ -2,7 +2,28 @@
 
 ## MRO - Method Resolution Order
 
-### Lección 26: Orden de Resolución de Métodos
+### Lección 27: Orden de Resolución de Métodos
+
+#### Diagrama de MRO
+
+```mermaid
+graph TD
+    A[object] --> B[A]
+    A --> C[A]
+    B --> D[B]
+    C --> E[C]
+    D --> F[D]
+    E --> F
+    
+    style F fill:#FFD700
+    style D fill:#90EE90
+    style E fill:#87CEEB
+    style B fill:#FFB6C1
+    style C fill:#FFB6C1
+    style A fill:#DDA0DD
+    
+    note1[MRO de D: D → B → C → A → object]
+```
 
 El MRO (Method Resolution Order) determina el orden en que Python busca métodos en una jerarquía de herencia múltiple.
 
@@ -112,9 +133,46 @@ print(Murcielago.mro())
 
 ## Polimorfismo
 
-### Lección 27: Polimorfismo en Python
+### Lección 28: Polimorfismo en Python
 
 Polimorfismo significa "muchas formas". Permite usar la misma interfaz para diferentes tipos de objetos.
+
+#### Diagrama de Polimorfismo
+
+```mermaid
+graph TD
+    A[Función: hacer_sonido animal] --> B{Tipo de Animal}
+    B -->|Perro| C[Woof!]
+    B -->|Gato| D[Meow!]
+    B -->|Vaca| E[Moo!]
+    B -->|Pato| F[Quack!]
+    
+    style A fill:#FFD700
+    style C fill:#90EE90
+    style D fill:#87CEEB
+    style E fill:#FFB6C1
+    style F fill:#DDA0DD
+```
+
+#### Tipos de Polimorfismo
+
+```
+┌─────────────────────────────────────────┐
+│         POLIMORFISMO EN PYTHON          │
+├─────────────────────────────────────────┤
+│                                         │
+│  1. Duck Typing                         │
+│     "Si camina como pato y grazna       │
+│      como pato, entonces es un pato"    │
+│                                         │
+│  2. Operator Overloading                │
+│     __add__, __sub__, __mul__           │
+│                                         │
+│  3. Method Overriding                   │
+│     Redefinir métodos en subclases      │
+│                                         │
+└─────────────────────────────────────────┘
+```
 
 #### Tipos de Polimorfismo
 
@@ -215,9 +273,31 @@ El módulo se carga en tiempo de ejecución, no se embebe en el código.
 
 ## Encapsulación
 
-### Lección 28: Encapsulación en Python
+### Lección 29: Encapsulación en Python
 
 La encapsulación oculta los detalles internos y restringe el acceso directo a los datos.
+
+#### Niveles de Acceso Visual
+
+```
+┌──────────────────────────────────────────────┐
+│            ENCAPSULACIÓN                     │
+├──────────────────────────────────────────────┤
+│                                              │
+│  🌍 Público (public)                         │
+│     variable                                 │
+│     ✓ Accesible desde cualquier lugar       │
+│                                              │
+│  🔒 Protegido (protected)                    │
+│     _variable                                │
+│     ⚠️  Convención: uso interno              │
+│                                              │
+│  🔐 Privado (private)                        │
+│     __variable                               │
+│     ❌ Name mangling, difícil acceder        │
+│                                              │
+└──────────────────────────────────────────────┘
+```
 
 #### Niveles de Acceso
 

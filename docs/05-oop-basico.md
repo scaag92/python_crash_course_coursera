@@ -2,7 +2,66 @@
 
 ## Introducción
 
-### Lección 24: Conceptos Fundamentales de OOP
+### Lección 25: Conceptos Fundamentales de OOP
+
+#### Diagrama: Clase vs Objeto
+
+```mermaid
+classDiagram
+    class Clase {
+        <<blueprint>>
+        +atributos
+        +métodos()
+    }
+    
+    class Objeto1 {
+        +valores específicos
+        +comportamiento
+    }
+    
+    class Objeto2 {
+        +valores específicos
+        +comportamiento
+    }
+    
+    class Objeto3 {
+        +valores específicos
+        +comportamiento
+    }
+    
+    Clase --> Objeto1 : instancia
+    Clase --> Objeto2 : instancia
+    Clase --> Objeto3 : instancia
+```
+
+#### Ejemplo Visual
+
+```
+┌─────────────────────────────────┐
+│         Clase: Auto             │
+│  ┌───────────────────────────┐  │
+│  │ Atributos:                │  │
+│  │  - marca                  │  │
+│  │  - modelo                 │  │
+│  │  - color                  │  │
+│  │  - velocidad              │  │
+│  └───────────────────────────┘  │
+│  ┌───────────────────────────┐  │
+│  │ Métodos:                  │  │
+│  │  - acelerar()             │  │
+│  │  - frenar()               │  │
+│  │  - girar()                │  │
+│  └───────────────────────────┘  │
+└─────────────────────────────────┘
+         │
+         ├──────────┬──────────┐
+         ▼          ▼          ▼
+    ┌────────┐ ┌────────┐ ┌────────┐
+    │ auto1  │ │ auto2  │ │ auto3  │
+    │ Toyota │ │ Honda  │ │ Ford   │
+    │ Rojo   │ │ Azul   │ │ Negro  │
+    └────────┘ └────────┘ └────────┘
+```
 
 La Programación Orientada a Objetos (OOP) es un paradigma que organiza el código en objetos que contienen datos (atributos) y comportamientos (métodos).
 
@@ -179,9 +238,47 @@ celular1.llamar()  # Estás haciendo una llamada desde un: S50
 
 ## Herencia
 
-### Lección 25: Herencia en Python
+### Lección 26: Herencia en Python
 
 La herencia permite que una clase (hija) herede atributos y métodos de otra clase (padre).
+
+#### Diagrama de Herencia
+
+```mermaid
+classDiagram
+    Animal <|-- Mamifero
+    Animal <|-- Ave
+    Animal <|-- Pez
+    
+    Mamifero <|-- Perro
+    Mamifero <|-- Gato
+    Mamifero <|-- Humano
+    
+    Ave <|-- Aguila
+    Ave <|-- Pinguino
+    
+    class Animal {
+        +nombre
+        +edad
+        +comer()
+        +dormir()
+    }
+    
+    class Mamifero {
+        +pelo
+        +amamantar()
+    }
+    
+    class Ave {
+        +plumas
+        +poner_huevos()
+    }
+    
+    class Perro {
+        +raza
+        +ladrar()
+    }
+```
 
 #### Herencia Simple
 

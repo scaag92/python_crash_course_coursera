@@ -1,8 +1,77 @@
 # 🎓 Proyecto Final - Analizador de Sentimientos
 
-## Lección 32: Proyecto Integrador
+## Lección 33: Proyecto Integrador
 
 Este proyecto final integra múltiples conceptos aprendidos en el curso para crear un analizador de sentimientos usando APIs externas.
+
+## Arquitectura del Proyecto
+
+```mermaid
+graph TD
+    A[Usuario] -->|Ingresa texto| B[Sistema Principal]
+    B --> C{Tipo de Análisis}
+    C -->|TextBlob| D[AnalizadorTextBlob]
+    C -->|OpenAI| E[AnalizadorOpenAI]
+    
+    D --> F[Análisis de Polaridad]
+    E --> G[API OpenAI]
+    G --> H[Respuesta Numérica]
+    
+    F --> I[Clasificador de Sentimientos]
+    H --> I
+    
+    I --> J{Rango de Polaridad}
+    J -->|< -0.6| K[Muy Negativo 😢]
+    J -->|-0.6 a -0.1| L[Negativo 😕]
+    J -->|-0.1 a 0.1| M[Neutral 😐]
+    J -->|0.1 a 0.6| N[Positivo 🙂]
+    J -->|> 0.6| O[Muy Positivo 😄]
+    
+    K --> P[Mostrar Resultado]
+    L --> P
+    M --> P
+    N --> P
+    O --> P
+    
+    style A fill:#87CEEB
+    style K fill:#FF6B6B
+    style L fill:#FFA07A
+    style M fill:#FFD700
+    style N fill:#90EE90
+    style O fill:#32CD32
+```
+
+## Flujo de Datos
+
+```
+┌─────────────┐
+│   Usuario   │
+└──────┬──────┘
+       │ "Estoy feliz"
+       ▼
+┌─────────────────────────┐
+│  Analizador Principal   │
+└──────┬──────────────────┘
+       │
+       ├──────────┬──────────┐
+       ▼          ▼          ▼
+   ┌────────┐ ┌────────┐ ┌────────┐
+   │TextBlob│ │OpenAI  │ │Custom  │
+   └───┬────┘ └───┬────┘ └───┬────┘
+       │          │          │
+       └──────────┴──────────┘
+                  │
+                  ▼ 0.8
+       ┌──────────────────┐
+       │  Clasificador    │
+       └────────┬─────────┘
+                │
+                ▼
+         ┌─────────────┐
+         │  Positivo   │
+         │     😊      │
+         └─────────────┘
+```
 
 ---
 

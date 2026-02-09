@@ -20,6 +20,26 @@ Comienza aquí para ver el índice completo y la ruta de aprendizaje recomendada
 
 ## 📚 Contenido del Curso
 
+### 📊 Progresión del Curso
+
+```mermaid
+graph LR
+    A[🌟 Fundamentos<br/>Semana 1] --> B[🔄 Control de Flujo<br/>Semana 2]
+    B --> C[📊 Estructuras<br/>Semana 3]
+    C --> D[🚀 Avanzado<br/>Semana 4]
+    D --> E[🏗️ OOP Básico<br/>Semana 5]
+    E --> F[🎓 OOP Avanzado<br/>Semana 6]
+    F --> G[🎯 SOLID + Proyecto<br/>Semana 7]
+    
+    style A fill:#90EE90
+    style B fill:#87CEEB
+    style C fill:#FFB6C1
+    style D fill:#DDA0DD
+    style E fill:#FFD700
+    style F fill:#FFA07A
+    style G fill:#FF6B6B
+```
+
 ### 🌟 Fundamentos (Semana 1)
 - **[Lección 1-3](docs/01-fundamentos.md#hello-world)**: Hello World, Input/Output
 - **[Lección 4-5](docs/02-control-flujo.md#bucles-for)**: Bucles For Básicos

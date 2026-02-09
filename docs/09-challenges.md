@@ -4,6 +4,61 @@
 
 Los desafíos en la carpeta `Challenges/` están diseñados para aplicar Python en contextos reales de Cloud Computing y DevOps.
 
+## Mapa de Desafíos
+
+```mermaid
+graph LR
+    A[Desafíos Cloud/DevOps] --> B[Challenge 1: VMs]
+    A --> C[Challenge 2: Logs]
+    A --> D[Challenge 3: Storage]
+    A --> E[Challenge 4: Tags]
+    A --> F[Terraform]
+    
+    B --> B1[Filtrar instancias]
+    C --> C1[Parsear logs]
+    D --> D1[Calcular desperdicio]
+    E --> E1[Validar tags]
+    F --> F1[IaC con Python]
+    
+    style A fill:#FFD700
+    style B fill:#87CEEB
+    style C fill:#90EE90
+    style D fill:#FFB6C1
+    style E fill:#DDA0DD
+    style F fill:#FFA07A
+```
+
+## Flujo de Trabajo DevOps
+
+```
+┌─────────────────────────────────────────────┐
+│         CICLO DE VIDA DEVOPS                │
+├─────────────────────────────────────────────┤
+│                                             │
+│  1. 📝 Plan                                 │
+│     └─> Challenge 4: Validar Tags          │
+│                                             │
+│  2. 💻 Code                                 │
+│     └─> Python Scripts                     │
+│                                             │
+│  3. 🏗️  Build                               │
+│     └─> Terraform: IaC                     │
+│                                             │
+│  4. 🧪 Test                                 │
+│     └─> Challenge 1: Filtrar VMs           │
+│                                             │
+│  5. 🚀 Deploy                               │
+│     └─> Automatización                     │
+│                                             │
+│  6. 🔧 Operate                              │
+│     └─> Challenge 3: Storage               │
+│                                             │
+│  7. 📊 Monitor                              │
+│     └─> Challenge 2: Logs                  │
+│                                             │
+└─────────────────────────────────────────────┘
+```
+
 ---
 
 ## Challenge 1: Filtrar VMs en Ejecución

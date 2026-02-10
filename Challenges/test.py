@@ -1,14 +1,9 @@
-file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+d = {"dev": "10.0.0.1", "prod": "10.0.0.2"}
 
-disks = [
-    {"id": "d-1", "size_gb": 100, "attached_to": "vm-1"},
-    {"id": "d-2", "size_gb": 50,  "attached_to": None},  # Unattached
-    {"id": "d-3", "size_gb": 200, "attached_to": None},  # Unattached
-    {"id": "d-4", "size_gb": 500, "attached_to": "vm-2"}
-]
+for key, value in d.items():
+    print(key, value)
 
 
-for i in disks:
-    for d in i.values():
-        if i["attached_to"] == "None":
-            print (i.values())
+do = ["dev","10.0.0.1","prod","10.0.0.2"]
+for m in do:
+    print(m)
